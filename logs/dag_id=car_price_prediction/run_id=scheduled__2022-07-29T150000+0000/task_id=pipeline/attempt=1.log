@@ -1,0 +1,36 @@
+[2024-09-12T15:19:42.868+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-12T15:19:46.252+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2022-07-29T15:00:00+00:00 [queued]>
+[2024-09-12T15:19:46.443+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2022-07-29T15:00:00+00:00 [queued]>
+[2024-09-12T15:19:46.457+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-09-12T15:19:46.768+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): pipeline> on 2022-07-29 15:00:00+00:00
+[2024-09-12T15:19:47.017+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=151) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-12T15:19:47.024+0000] {standard_task_runner.py:72} INFO - Started process 194 to run task
+[2024-09-12T15:19:47.018+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'car_price_prediction', 'pipeline', 'scheduled__2022-07-29T15:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/hw_dag.py', '--cfg-path', '/tmp/tmpu3dqnewp']
+[2024-09-12T15:19:47.050+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask pipeline
+[2024-09-12T15:19:48.289+0000] {task_command.py:467} INFO - Running <TaskInstance: car_price_prediction.pipeline scheduled__2022-07-29T15:00:00+00:00 [running]> on host 6d94a8a19157
+[2024-09-12T15:19:49.741+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='car_price_prediction' AIRFLOW_CTX_TASK_ID='pipeline' AIRFLOW_CTX_EXECUTION_DATE='2022-07-29T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-07-29T15:00:00+00:00'
+[2024-09-12T15:19:49.756+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-12T15:19:49.764+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-12T15:19:49.776+0000] {logging_mixin.py:190} INFO - Current task name:pipeline state:running start_date:2024-09-12 15:19:46.271332+00:00
+[2024-09-12T15:19:49.784+0000] {logging_mixin.py:190} INFO - Dag name:car_price_prediction and current dag run status:running
+[2024-09-12T15:19:49.785+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-12T15:20:32.552+0000] {pipeline.py:116} INFO - model: LogisticRegression, acc_mean: 0.7591, acc_std: 0.0075
+[2024-09-12T15:25:49.193+0000] {job.py:229} INFO - Heartbeat recovered after 11.14 seconds
+[2024-09-12T15:25:57.950+0000] {job.py:229} INFO - Heartbeat recovered after 15.69 seconds
+[2024-09-12T15:30:39.935+0000] {job.py:229} INFO - Heartbeat recovered after 32.40 seconds
+[2024-09-12T15:32:54.049+0000] {job.py:229} INFO - Heartbeat recovered after 16.89 seconds
+[2024-09-12T15:36:18.932+0000] {job.py:229} INFO - Heartbeat recovered after 10.96 seconds
+[2024-09-12T15:36:44.906+0000] {pipeline.py:116} INFO - model: RandomForestClassifier, acc_mean: 0.7783, acc_std: 0.0051
+[2024-09-12T15:38:43.949+0000] {job.py:229} INFO - Heartbeat recovered after 13.96 seconds
+[2024-09-12T15:40:41.268+0000] {job.py:229} INFO - Heartbeat recovered after 14.63 seconds
+[2024-09-12T15:44:18.244+0000] {job.py:229} INFO - Heartbeat recovered after 119.10 seconds
+[2024-09-12T15:50:49.098+0000] {job.py:229} INFO - Heartbeat recovered after 10.65 seconds
+[2024-09-12T15:51:02.325+0000] {job.py:229} INFO - Heartbeat recovered after 13.25 seconds
+[2024-09-12T15:51:13.505+0000] {job.py:229} INFO - Heartbeat recovered after 11.27 seconds
+[2024-09-12T15:52:57.405+0000] {pipeline.py:116} INFO - model: SVC, acc_mean: 0.7871, acc_std: 0.0042
+[2024-09-12T15:52:57.686+0000] {pipeline.py:121} INFO - best model: SVC, accuracy: 0.7871
+[2024-09-12T15:54:14.698+0000] {local_task_job_runner.py:261} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2024-09-12T15:54:16.201+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-12T15:54:16.219+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
